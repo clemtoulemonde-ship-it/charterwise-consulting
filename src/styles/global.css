@@ -53,3 +53,51 @@
     background-size: 100% 3px;
   }
 }
+
+/* Sticky header: solid ground background, hairline stays the only separator (no shadows/glass). */
+#site-header {
+  transition: padding-top 0.25s ease, padding-bottom 0.25s ease;
+}
+
+#site-header[data-scrolled='true'] {
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+
+/* Scroll-triggered reveal: a quiet fade + rise, consistent with an annotated page settling into place. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* The small rule-marks draw themselves in, like a pen underlining a margin note. */
+[data-reveal-rule] {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal-rule].is-visible {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal-rule] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  #site-header {
+    transition: none;
+  }
+}
