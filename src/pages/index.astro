@@ -1,0 +1,104 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const email = 'clement@charterwise.app';
+---
+
+<Layout>
+  <main class="max-w-2xl mx-auto px-6 py-16 sm:py-24">
+    <section class="mb-16">
+      <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight mb-4">
+        Operational and AI guidance for charter fleet operators
+      </h1>
+      <p class="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-8">
+        I help small, independent charter companies find where AI and better process can
+        realistically save time, and put it into practice without disrupting how you already run
+        things.
+      </p>
+      <a
+        href={`mailto:${email}`}
+        class="inline-block rounded-md bg-[var(--color-clay)] text-white px-5 py-2.5 font-medium hover:bg-[var(--color-clay-dark)] transition-colors"
+      >
+        Get in touch
+      </a>
+    </section>
+
+    <section class="mb-14">
+      <p class="text-sm font-medium uppercase tracking-wide text-[var(--color-text-secondary)]">
+        Who this is for
+      </p>
+      <p class="text-lg mt-2">
+        For small, independent and family run charter fleet operators.
+      </p>
+    </section>
+
+    <section class="mb-14">
+      <p class="text-lg leading-relaxed">
+        A lot of operators are buried in the day to day: bookings, handovers, admin. There's
+        rarely time left for the parts of the business that actually matter. Most sense AI could
+        help somewhere, but not exactly where to point it.
+      </p>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-xl font-semibold mb-6">What I help with</h2>
+      <ul class="space-y-5">
+        <li class="border-l-2 border-[var(--color-border)] pl-4">
+          <p class="font-medium">A readiness assessment</p>
+          <p class="text-[var(--color-text-secondary)]">
+            A short, practical look at where your time is actually going, and where AI or better
+            process could realistically help.
+          </p>
+        </li>
+        <li class="border-l-2 border-[var(--color-border)] pl-4">
+          <p class="font-medium">Implementation support</p>
+          <p class="text-[var(--color-text-secondary)]">
+            Hands-on help actually putting a change into practice, not just a report.
+          </p>
+        </li>
+        <li class="border-l-2 border-[var(--color-border)] pl-4">
+          <p class="font-medium">Ongoing advice</p>
+          <p class="text-[var(--color-text-secondary)]">
+            Light, continuing support once things are running, for as long as it's useful.
+          </p>
+        </li>
+      </ul>
+      <p class="text-sm text-[var(--color-text-secondary)] italic mt-6">
+        Scoped to what the business actually needs right now, not a full-time commitment.
+      </p>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-xl font-semibold mb-4">About</h2>
+      <p class="leading-relaxed mb-4">
+        I spent over 15 years leading operations teams at Google and Meta. The last several years
+        were spent finding where AI could take repetitive, manual work off people's plates, and
+        proving it actually saved time rather than just adding another tool to the pile.
+      </p>
+      <p class="leading-relaxed">
+        Charter operators face a smaller version of the same problem: too much time going into
+        bookings, handovers, and admin, not enough left for the parts of the business that
+        matter. I help figure out where AI and better process can realistically help, and how to
+        put that into practice without disrupting how you already run things.
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-xl font-semibold mb-4">How a first call works</h2>
+      <p class="leading-relaxed">
+        If this sounds useful, the first step is just a conversation, not a pitch. We talk
+        through what your day to day actually looks like, and whether there's anything concrete I
+        could help with. No cost, no obligation either way.
+      </p>
+    </section>
+
+    <footer class="pt-10 border-t border-[var(--color-border)] text-sm text-[var(--color-text-secondary)]">
+      <p class="mb-2">
+        <a href={`mailto:${email}`} class="text-[var(--color-clay)] hover:text-[var(--color-clay-dark)]">
+          {email}
+        </a>
+      </p>
+      <p>This is Clement's independent consulting practice, separate from the CharterWise app.</p>
+    </footer>
+  </main>
+</Layout>
