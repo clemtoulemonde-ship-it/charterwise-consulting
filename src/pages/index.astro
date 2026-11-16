@@ -73,7 +73,7 @@ const steps = [
         <div class="flex flex-wrap items-center gap-6 mb-6">
           <a
             href={`mailto:${email}`}
-            class="inline-block rounded-[var(--radius-md)] bg-[var(--color-primary)] text-[var(--color-on-primary)] px-5 py-3 font-text font-semibold text-[15px] hover:bg-[var(--color-primary-hover)] hover:-translate-y-0.5 transition-[background-color,transform] duration-200"
+            class="inline-block rounded-[var(--radius-md)] bg-[linear-gradient(135deg,var(--color-primary),var(--color-primary-hover))] text-[var(--color-on-primary)] px-5 py-3 font-text font-semibold text-[15px] shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-[box-shadow,transform] duration-200"
           >
             Book a 30-minute call
           </a>
@@ -86,7 +86,11 @@ const steps = [
           ones who don't, and don't have time to figure this out alone.
         </p>
       </div>
-      <aside class="pt-1" data-reveal style="--reveal-delay: 150ms;">
+      <aside
+        class="rounded-[var(--radius-md)] border border-[var(--color-hairline)] bg-[var(--color-surface)] p-5 shadow-sm transition-[box-shadow,transform] duration-300 hover:shadow-md hover:-translate-y-1"
+        data-reveal
+        style="--reveal-delay: 150ms;"
+      >
         <div class="w-6 h-0.5 bg-[var(--color-accent)] mb-3" data-reveal-rule style="--reveal-delay: 450ms;"></div>
         <p class="font-display italic text-base text-[var(--color-muted)] leading-snug">
           Advice by call, then a written plan you keep, whether or not we carry on together.
@@ -97,14 +101,16 @@ const steps = [
     <section id="how-i-work" class="grid sm:grid-cols-[1fr_220px] gap-10 py-14 border-t border-[var(--color-hairline)]">
       <div class="max-w-[65ch]" data-reveal>
         <h2 class="font-display text-2xl mb-8">How I work</h2>
-        <ol class="divide-y divide-[var(--color-hairline)]">
+        <ol class="grid gap-4">
           {steps.map((step, i) => (
-            <li class="py-6 first:pt-0 last:pb-0 sm:grid sm:grid-cols-[180px_1fr] sm:gap-8" data-reveal style={`--reveal-delay: ${i * 120}ms;`}>
-              <div class="w-6 h-0.5 bg-[var(--color-primary)] mb-3 sm:mb-0 sm:mt-2" data-reveal-rule style={`--reveal-delay: ${i * 120 + 200}ms;`}></div>
-              <div class="sm:col-start-2 sm:-mt-[26px]">
-                <p class="font-text font-semibold mb-1">{step.title}</p>
-                <p class="text-[var(--color-muted)] max-w-[60ch]">{step.body}</p>
-              </div>
+            <li
+              class="rounded-[var(--radius-md)] border border-[var(--color-hairline)] bg-[var(--color-surface)] p-6 shadow-sm transition-[box-shadow,transform] duration-300 hover:shadow-md hover:-translate-y-1"
+              data-reveal
+              style={`--reveal-delay: ${i * 120}ms;`}
+            >
+              <div class="w-6 h-0.5 bg-[var(--color-primary)] mb-4" data-reveal-rule style={`--reveal-delay: ${i * 120 + 200}ms;`}></div>
+              <p class="font-text font-semibold mb-1">{step.title}</p>
+              <p class="text-[var(--color-muted)] max-w-[60ch]">{step.body}</p>
             </li>
           ))}
         </ol>
@@ -112,7 +118,11 @@ const steps = [
           Scoped to what the business actually needs right now, not a full-time commitment.
         </p>
       </div>
-      <aside class="pt-1" data-reveal style="--reveal-delay: 150ms;">
+      <aside
+        class="rounded-[var(--radius-md)] border border-[var(--color-hairline)] bg-[var(--color-surface)] p-5 shadow-sm transition-[box-shadow,transform] duration-300 hover:shadow-md hover:-translate-y-1"
+        data-reveal
+        style="--reveal-delay: 150ms;"
+      >
         <p class="font-text text-sm font-semibold text-[var(--color-accent-ink)] mb-3">
           Example
         </p>
@@ -134,7 +144,7 @@ const steps = [
             alt="Clement Toulemonde"
             width="410"
             height="600"
-            class="w-24 h-32 object-cover object-top rounded-[var(--radius-md)] border border-[var(--color-hairline)] mb-4 sm:mb-0 sm:flex-shrink-0"
+            class="w-32 h-44 sm:w-40 sm:h-56 object-cover object-top rounded-[var(--radius-md)] border border-[var(--color-hairline)] shadow-md mb-4 sm:mb-0 sm:flex-shrink-0 transition-transform duration-300 hover:scale-[1.03]"
           />
           <div>
             <p class="leading-relaxed mb-4">
@@ -168,7 +178,11 @@ const steps = [
           </div>
         </div>
       </div>
-      <aside class="pt-1" data-reveal style="--reveal-delay: 150ms;">
+      <aside
+        class="rounded-[var(--radius-md)] border border-[var(--color-hairline)] bg-[var(--color-surface)] p-5 shadow-sm transition-[box-shadow,transform] duration-300 hover:shadow-md hover:-translate-y-1"
+        data-reveal
+        style="--reveal-delay: 150ms;"
+      >
         <div class="w-6 h-0.5 bg-[var(--color-accent)] mb-3" data-reveal-rule style="--reveal-delay: 450ms;"></div>
         <p class="font-display italic text-base text-[var(--color-muted)] leading-snug">
           If this sounds useful, the first step is just a conversation, not a pitch. No cost, no

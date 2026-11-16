@@ -29,6 +29,11 @@
   --radius-sm: 3px;
   --radius-md: 6px;
   --radius-pill: 999px;
+
+  /* Restrained, green-tinted elevation scale (no generic black/grey shadows). */
+  --shadow-sm: 0 1px 3px rgba(44, 74, 61, 0.08);
+  --shadow-md: 0 10px 24px -8px rgba(44, 74, 61, 0.2);
+  --shadow-lg: 0 24px 48px -16px rgba(44, 74, 61, 0.26);
 }
 
 @layer base {
@@ -40,6 +45,12 @@
     font-family: var(--font-text);
     color: var(--color-ink);
     background-color: var(--color-ground);
+    background-image: radial-gradient(
+      ellipse 900px 520px at 88% -80px,
+      rgba(157, 179, 155, 0.35),
+      transparent 70%
+    );
+    background-repeat: no-repeat;
     -webkit-font-smoothing: antialiased;
   }
 }
@@ -47,21 +58,32 @@
 @layer utilities {
   .sage-underline {
     text-decoration: none;
-    background-image: linear-gradient(var(--color-accent), var(--color-accent));
+    background-image: linear-gradient(90deg, var(--color-accent), var(--color-accent-ink));
     background-repeat: no-repeat;
-    background-position: 0 1.08em;
+    background-position: 0 100%;
+    background-size: 0% 3px;
+    transition: background-size 0.7s ease;
+    transition-delay: 250ms;
+  }
+
+  [data-reveal].is-visible .sage-underline {
     background-size: 100% 3px;
   }
 }
 
-/* Sticky header: solid ground background, hairline stays the only separator (no shadows/glass). */
+/* Sticky header: solid paper at rest, a soft frosted lift once the page scrolls under it. */
 #site-header {
-  transition: padding-top 0.25s ease, padding-bottom 0.25s ease;
+  transition: padding-top 0.25s ease, padding-bottom 0.25s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 #site-header[data-scrolled='true'] {
   padding-top: var(--space-2);
   padding-bottom: var(--space-2);
+  background-color: rgb(236 238 232 / 0.75);
+  backdrop-filter: blur(10px) saturate(1.1);
+  -webkit-backdrop-filter: blur(10px) saturate(1.1);
+  box-shadow: var(--shadow-md);
 }
 
 /* Scroll-triggered reveal: a quiet fade + rise, consistent with an annotated page settling into place. */
