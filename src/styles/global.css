@@ -71,7 +71,9 @@
   }
 }
 
-/* Sticky header: solid paper at rest, a soft frosted lift once the page scrolls under it. */
+/* Sticky header: solid paper throughout, compacting with a soft lift once the page scrolls under it.
+   (backdrop-filter was tried for a frosted look but renders unreliably once the header wraps to two
+   rows on narrow screens, letting page content bleed through — opaque is the robust choice.) */
 #site-header {
   transition: padding-top 0.25s ease, padding-bottom 0.25s ease, background-color 0.3s ease,
     box-shadow 0.3s ease;
@@ -80,9 +82,7 @@
 #site-header[data-scrolled='true'] {
   padding-top: var(--space-2);
   padding-bottom: var(--space-2);
-  background-color: rgb(236 238 232 / 0.94);
-  backdrop-filter: blur(14px) saturate(1.1);
-  -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  background-color: var(--color-ground);
   box-shadow: var(--shadow-md);
 }
 
