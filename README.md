@@ -1,7 +1,7 @@
 # CharterWise Consulting
 
-Landing page for Clement's independent AI/operations consulting practice aimed at small,
-family run charter fleet operators. Deployed to `consulting.charterwise.app` via GitHub Pages.
+Landing page for Clement's independent AI/operations consulting practice aimed at small
+charter fleet operators. Deployed to `consulting.charterwise.app` via GitHub Pages.
 
 Separate practice from the CharterWise app; see `.github` org and the scoping notes in the
 personal 2nd Brain vault (`CharterWise Consulting - Scoping.md` and
