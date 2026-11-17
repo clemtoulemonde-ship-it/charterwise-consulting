@@ -39,12 +39,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   body {
     font-family: var(--font-text);
     color: var(--color-ink);
     background-color: var(--color-ground);
+    overflow-x: clip;
     background-image: radial-gradient(
       ellipse 900px 520px at 88% -80px,
       rgba(157, 179, 155, 0.35),
